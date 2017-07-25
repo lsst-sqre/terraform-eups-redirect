@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: &name eups-redirect
+  labels: &labels
+    name: *name
+    app: *name
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels: *labels
+    spec:
+      containers:
+        - name: redirector
+          imagePullPolicy: "Always"
+          image: "docker.io/lsstsqre/eupsredirector"
+          ports:
+            - name: eups-redirector
+              containerPort: 80
