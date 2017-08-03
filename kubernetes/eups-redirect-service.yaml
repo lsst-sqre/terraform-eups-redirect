@@ -1,0 +1,21 @@
+# Load balancer service
+#
+# See http://kubernetes.io/docs/user-guide/services/#type-loadbalancer
+#
+# This Service internally load balances traffic from the nginx-ssl-proxy
+# to ports on pod(s).
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: &name eups-redirect
+  labels: &labels
+    name: *name
+    app: *name
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: eups-redirector
+      protocol: TCP
+  selector: *labels

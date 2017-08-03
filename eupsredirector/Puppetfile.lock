@@ -1,0 +1,38 @@
+FORGE
+  remote: https://forgeapi.puppetlabs.com
+  specs:
+    camptocamp-augeas (1.6.0)
+      puppetlabs-stdlib (< 5.0.0, >= 3.2.0)
+    puppetlabs-apt (2.4.0)
+      puppetlabs-stdlib (< 5.0.0, >= 4.13.0)
+    puppetlabs-concat (2.2.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+    puppetlabs-stdlib (4.17.1)
+    saz-timezone (3.3.0)
+      puppetlabs-stdlib (>= 2.3.0)
+
+GIT
+  remote: https://github.com/jfryman/puppet-nginx.git
+  ref: 56e1c591bf5bfd06c34782c66953b3bc4b10fafa
+  sha: 56e1c591bf5bfd06c34782c66953b3bc4b10fafa
+  specs:
+    jfryman-nginx (0.3.0)
+      puppetlabs-apt (< 3.0.0, >= 1.8.0)
+      puppetlabs-concat (< 3.0.0, >= 1.1.1)
+      puppetlabs-stdlib (< 5.0.0, >= 4.2.0)
+
+GIT
+  remote: https://github.com/jfryman/puppet-selinux.git
+  ref: 940eb46fa020bec5d028518c548a89892c543977
+  sha: 940eb46fa020bec5d028518c548a89892c543977
+  specs:
+    jfryman-selinux (0.3.1)
+      puppetlabs-stdlib (>= 0)
+
+DEPENDENCIES
+  camptocamp-augeas (~> 1.4)
+  jfryman-nginx (>= 0)
+  jfryman-selinux (>= 0)
+  puppetlabs-stdlib (>= 0)
+  saz-timezone (~> 3.3.0)
+
