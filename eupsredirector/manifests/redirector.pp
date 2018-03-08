@@ -28,7 +28,8 @@ selboolean { 'httpd_setrlimit':
 # a certificate error before getting to the redirect to the canonical name.
 $redirect_raw_prepend = [
   "if ( \$host != \'${eupspkg_host}\' ) {",
-  "  rewrite ^/eupspkg/(.*)$ https://${eupspkg_host}/stack/src/\$1 last;",
+  "  rewrite ^/eupspkg/(.*)$ https://${eupspkg_host}/stack/src/\$1 permanent;",
+  "  return 301 https://${eupspkg_host}$request_uri;",
   '}',
 ]
 
