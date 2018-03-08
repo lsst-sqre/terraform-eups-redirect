@@ -29,6 +29,7 @@ selboolean { 'httpd_setrlimit':
 $redirect_raw_prepend = [
   "if ( \$host != \'${eupspkg_host}\' ) {",
   "  rewrite ^/eupspkg/(.*)$ https://${eupspkg_host}/stack/src/\$1 permanent;",
+  "  return 301 https://${eupspkg_host}$request_uri;",
   '}',
 ]
 
