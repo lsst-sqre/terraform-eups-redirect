@@ -39,6 +39,7 @@ nginx::resource::vhost { $redirect_host:
     'sw.lsstcorp.org',
   ],
   listen_port          => 80,
+  listen_options       => 'default_server',
   ssl                  => false,
   access_log           => $redirect_access_log,
   error_log            => $redirect_error_log,
