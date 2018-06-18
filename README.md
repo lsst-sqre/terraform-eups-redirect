@@ -4,7 +4,6 @@ terraform / kubernetes deployment for sw.lsstcorp.org
 Kubernetes deployment of an nginx server that redirects `sw.lsstcorp.org` to
 `eups.lsst.codes`.
 
-
 tl;dr
 ---
 
