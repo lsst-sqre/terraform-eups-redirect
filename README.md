@@ -1,7 +1,7 @@
 terraform `pkgroot-redirect` module
 ===
 
-[![Build Status](https://travis-ci.org/lsst-sqre/terraform-eups-redirect.png)](https://travis-ci.org/lsst-sqre/terraform-eups-redirect)
+[![Build Status](https://travis-ci.org/lsst-sqre/terraform-pkgroot-redirect.png)](https://travis-ci.org/lsst-sqre/terraform-pkgroot-redirect)
 
 Kubernetes deployment of an nginx server that redirects `sw.lsstcorp.org` to
 `eups.lsst.codes`.
