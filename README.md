@@ -1,6 +1,8 @@
 terraform / kubernetes deployment for sw.lsstcorp.org
 ===
 
+[![Build Status](https://travis-ci.org/lsst-sqre/terraform-eups-redirect.png)](https://travis-ci.org/lsst-sqre/terraform-eups-redirect)
+
 Kubernetes deployment of an nginx server that redirects `sw.lsstcorp.org` to
 `eups.lsst.codes`.
 
