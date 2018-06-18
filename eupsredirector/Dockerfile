@@ -1,5 +1,4 @@
 FROM docker.io/centos:7
-MAINTAINER sqre-admin
 
 USER root
 
