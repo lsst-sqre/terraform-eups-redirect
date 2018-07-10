@@ -36,3 +36,7 @@ variable "k8s_namespace" {
   description = "k8s namespace to manage resources within."
   default     = "pkgroot"
 }
+
+variable "proxycert" {}
+variable "proxykey" {}
+variable "dhparam" {}
