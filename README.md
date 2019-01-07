@@ -16,11 +16,7 @@ Usage
       service_name = "eups-redirect"
       domain_name  = "${var.domain_name}"
 
-      k8s_namespace              = "pkgroot-redirect"
-      k8s_host                   = "${module.gke.host}"
-      k8s_client_certificate     = "${module.gke.client_certificate}"
-      k8s_client_key             = "${module.gke.client_key}"
-      k8s_cluster_ca_certificate = "${module.gke.cluster_ca_certificate}"
+      k8s_namespace = "pkgroot-redirect"
 
       proxycert = "${file(".../sw.lsstcorp.org.20170530_chain.pem")}"
       proxykey  = "${file(".../sw.lsstcorp.org.20170530.key")}"
