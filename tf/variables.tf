@@ -22,11 +22,6 @@ variable "domain_name" {
   default     = "lsst.codes"
 }
 
-# remove "<env>-" prefix for production
-data "template_file" "fqdn" {
-  template = "${replace("${var.env_name}-${var.service_name}.${var.domain_name}", "prod-", "")}"
-}
-
 variable "k8s_namespace" {
   description = "k8s namespace to manage resources within."
   default     = "pkgroot"
@@ -35,3 +30,10 @@ variable "k8s_namespace" {
 variable "proxycert" {}
 variable "proxykey" {}
 variable "dhparam" {}
+
+locals {
+  # remove "<env>-" prefix for production
+  dns_prefix = "${replace("${var.env_name}-", "prod-", "")}"
+
+  fqdn = "${local.dns_prefix}${var.service_name}.${var.domain_name}"
+}
