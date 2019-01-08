@@ -1,4 +1,0 @@
-bin
-downloads/
-.terraform
-*tfstate*
