@@ -6,11 +6,11 @@ mod 'saz/timezone', '~> 3.3.0'
 
 # 0.3.1 does not include selinux module installation from a string
 mod 'jfryman/selinux',
-  :git => 'https://github.com/jfryman/puppet-selinux.git',
-  :ref=> '940eb46fa020bec5d028518c548a89892c543977'
+    git: 'https://github.com/jfryman/puppet-selinux.git',
+    ref: '940eb46fa020bec5d028518c548a89892c543977'
 
 # https://github.com/jfryman/puppet-nginx/pull/778
 # is required to work under puppet 4.4.1
 mod 'jfryman/nginx',
-  :git => 'https://github.com/jfryman/puppet-nginx.git',
-  :ref => '56e1c591bf5bfd06c34782c66953b3bc4b10fafa'
+    git: 'https://github.com/jfryman/puppet-nginx.git',
+    ref: '56e1c591bf5bfd06c34782c66953b3bc4b10fafa'
