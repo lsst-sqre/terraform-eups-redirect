@@ -19,6 +19,7 @@ module "pkgroot_redirect" {
   env_name     = "${var.env_name}"
   service_name = "eups-redirect"
   domain_name  = "${var.domain_name}"
+  dns_enable   = false
 
   k8s_namespace = "pkgroot-redirect"
 
